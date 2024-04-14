@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="book.css">
+  <title>Book Now</title>
+</head>
+<body>
+  <header>
+    <h1>Travel Website</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="booknow.html">Book Now</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="booking-form">
+      <h2>Book Your Trip</h2>
+      <form id="bookingForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination">
+          <option value="shimla">shimla</option>
+          <option value="Darjeeling">Darjeeling</option>
+          <option value="goa">goa</option>
+          <option value="jaipur">jaipur</option>
+          <option value="Kashmir">Kashmir</option>
+        </select>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <input type="submit" value="Book Now">
+      </form>
+      <div id="bookingDetails" style="display: none;">
+        <h2>Booking Details</h2>
+        <p id="successMessage"></p>
+      </div>
+    </section>
+    <aside class="booking-hotels" style="flex: 0 0 30%; background-color: #f4f4f4; padding: 1rem;">
+        <h2 style="margin-bottom: 1rem;">Book Hotels</h2>
+        <p>Find great deals on hotels for your trip. Book now and save!</p>
+        <p>Search for hotels in your destination and enjoy your stay.</p>
+        <a href="hotelbooking.html" style="display: block; margin-top: 1rem; text-decoration: none; background-color: #333; color: #fff; padding: 0.5rem 1rem; text-align: center;">Explore Hotels</a>
+      </aside>
+  </main>
+  <footer>
+    <p>&copy; 2024 Travel Website</p>
+  </footer>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+
+      // Get form values
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var destination = document.getElementById('destination').value;
+      var date = document.getElementById('date').value;
+
+      // Display booking details
+      var bookingDetails = document.getElementById('bookingDetails');
+      var successMessage = document.getElementById('successMessage');
+      successMessage.textContent = 'Successfully booked! Details: Name: ' + name + ', Email: ' + email + ', Destination: ' + destination + ', Date: ' + date;
+      bookingDetails.style.display = 'block';
+    });
+  </script>
+</body>
+</html>

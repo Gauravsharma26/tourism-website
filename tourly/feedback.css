@@ -1,0 +1,75 @@
+/* feedback.css */
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #4CAF50; /* Green background color */
+    padding: 10px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: white; /* White text color */
+  }
+  
+  /* Style the navigation menu */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  /* Style the main section */
+  main {
+    padding: 20px;
+  }
+  
+  .feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .feedback-form h2 {
+    margin-bottom: 20px;
+    color: #4CAF50; /* Green text color */
+  }
+  
+  .feedback-form label {
+    display: block;
+    margin-bottom: 5px;
+    color:grey; /* Green text color */
+  }
+  
+  .feedback-form input[type="text"],
+  .feedback-form input[type="email"],
+  .feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid grey; /* Green border */
+  }
+  
+  .feedback-form input[type="submit"] {
+    background-color:grey; /* Green background color */
+    color: white; /* White text color */
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .feedback-form input[type="submit"]:hover {
+    background-color: grey /* Darker green on hover */
+  }
+  
